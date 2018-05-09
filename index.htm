@@ -1,12 +1,64 @@
 <html>
   <head>
     <title>Video stream sample</title>
+    <link href="video-js.min.css" rel="stylesheet">
+     <link href="custom.css" rel="stylesheet">
+     <link href="bootstrap.css" rel="stylesheet">
+     <style>
+        .video-js .vjs-control-bar { 
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+        }
+
+        /* Make the demo a little prettier */
+        body {
+          margin-top: 100px;
+          background: #222;
+          text-align: center; 
+          color: #aaa;
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          background: radial-gradient(#333, hsl(200,30%,6%) );
+        }
+
+       
+    </style>
   </head>
   <body>
-    <video id="videoPlayer" controls>
-      <source src="http://localhost:3005/tracks/5af296ea27d68622940c24cb" type="video/mp4">
-    </video>
+
+    <div class="container" id="novideo" style="display:none;">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>No Video to show</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="showvideo" style="display:none;">
+      <div class="row">
+        <div class="col-md-2">
+          <ul class="list-group" id="videolist">            
+          </ul>
+        </div>
+        <div class="col-md-10">
+          <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="1000" height="500"  data-setup='{ "inactivityTimeout": 0 }'>
+            <source id="videosrc" src="" type='video/mp4'>
+    
+            <p class="vjs-no-js">
+              To view this video please enable JavaScript, and consider upgrading to a web browser that
+              <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+          </video>
+        </div>
+      </div>
+      
+    </div>
+    
     <!-- <button id="toggleButton">Start/Stop</button> -->
-    <script src="index.js"></script>
+    <script src="video.js"></script>
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
+
   </body>
 </html>

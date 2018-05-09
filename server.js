@@ -114,6 +114,24 @@ trackRoute.post('/', (req, res) => {
   });
 });
 
+/**
+ * GET /tracks/:trackID
+ */
+app.get('/tracklist', (req, res) => {
+  db.collection('tracks.files').find({})
+  .toArray(function(err, result) {
+    if (err) {
+      throw err; 
+    } else {
+        console.log(result);
+        res.set('content-type', 'application/json');
+        res.send(JSON.stringify(result));
+    }    
+    
+  });
+  
+});
+
 app.listen(3005, () => {
   console.log("App listening on port 3005!");
 });
