@@ -94,7 +94,7 @@ trackRoute.post('/', (req, res) => {
     }
     
     let trackName = req.body.name;
-    
+    console.log('trackname',trackName);
     // Covert buffer to Readable Stream
     const readableTrackStream = new Readable();
     readableTrackStream.push(req.file.buffer);
@@ -135,6 +135,34 @@ app.get('/tracklist', (req, res) => {
   });
   
 });
+
+app.get('/delete/:trackID', function (req, res) {
+  try {
+    var trackID = new ObjectID(req.params.trackID);
+  } catch (err) {
+    return res.status(400).json({ message: "Invalid trackID in URL parameter. Must be a single String of 12 bytes or a string of 24 hex characters" });
+  }
+
+  let bucket = new mongodb.GridFSBucket(db, {
+    bucketName: 'tracks'
+  });
+  bucket.delete(trackID).then(function () {
+    return res.status(201).json({ message: "File deleted successfully"});
+  });
+})
+
+app.get('/deletetracklist', function (req, res) {
+  
+  let bucket = new mongodb.GridFSBucket(db, {
+    bucketName: 'tracks'
+  });
+  bucket.drop().then(function () {
+    console.log('Tracklist dropped')
+    return res.status(200).json({ message: "Track list removed successfully"});
+  }, function(error) {
+    console.log('error', error)
+  });
+})
 
 app.listen(3005, () => {
   console.log("App listening on port 3005!");

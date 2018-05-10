@@ -2,7 +2,7 @@
   <head>
     <title>Video Upload</title>
         <link href="bootstrap.css" rel="stylesheet">
-        <link href="http://hayageek.github.io/jQuery-Upload-File/4.0.11/uploadfile.css" rel="stylesheet">
+        <link href="uploadfilelib.css" rel="stylesheet">
     <style>
         body {
           margin-top: 100px;
@@ -24,13 +24,35 @@
       <div class="row">
         <div class="col-md-12">
           <h2>Upload video</h2>
+          </br>
+        <a href="/" > Back to Video playlist</a> 
         </div>        
       </div>
 
-      <div class="row">
-        <div class="col-md-12">
+      <div class="row mt-5">
+        <div class="col-md-1 offset-md-2">
+          <div >File Name : </div>
+          
+        </div>
+        <div class="col-md-2">
+          <div ><input type="text" class="form-control" id="filename"></div>
+          <div id="errormsg" style="display:none;">File Name needed</div>
+        </div>
+
+        <div class="col-md-2">
+          <div>
+            <button class="btn btn-primary"  onclick="startUpload()">Start Upload</button>
+          </div>
+        </div>
+               
+      </div>
+
+      <div class="row mt-5">
+        
+        <div class="col-md-6 offset-md-2">
           <div id="fileuploader">Upload</div>
-        </div>        
+        </div> 
+                  
       </div>
       
     </div>
@@ -38,7 +60,7 @@
     <!-- <button id="toggleButton">Start/Stop</button> -->
    
     <script src="jquery.js"></script>
-    <script src="http://hayageek.github.io/jQuery-Upload-File/4.0.11/jquery.uploadfile.min.js"></script>
+    <script src="/uploadfilelib.js"></script>
     <script src="videoupload.js"></script>
 
   </body>

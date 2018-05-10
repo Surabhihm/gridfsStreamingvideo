@@ -31,19 +31,24 @@
       <div class="row">
         <div class="col-md-12">
           <h2>No Video to show</h2>
-          </br>
-          <a href="/uploadfilescreen" > Start uploading video <a>
+           </br> 
+           <a href="/uploadfilescreen" > Start uploading video </a> 
         </div>
       </div>
     </div>
 
     <div class="container-fluid" id="showvideo" style="display:none;">
       <div class="row">
-        <div class="col-md-2">
-          <ul class="list-group" id="videolist">            
-          </ul>
+        <div class="col-md-4">
+          <div class="list-group" id="videolist">            
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12">
+              <button class="btn btn-danger" onclick="deleteAll()">Delete All</button>
+            </div>
+          </div>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-8">
           <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="1000" height="500"  data-setup='{ "inactivityTimeout": 0 }'>
             <source id="videosrc" src="a" type='video/mp4'>
     
