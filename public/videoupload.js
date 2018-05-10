@@ -4,6 +4,7 @@ $(document).ready(function () {
         fileName: "track",
         dragDrop: true,
         autoSubmit: false,
+        maxFileCount: 1,
         // formData: { name: 'smallworld' },
         uploadStr: "Select file",
         dynamicFormData: function () {
