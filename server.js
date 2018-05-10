@@ -45,6 +45,10 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/index.htm'))
 })
 
+app.get('/uploadfilescreen', function(req, res) {
+  res.sendFile(path.join(__dirname + '/uploadfile.htm'))
+})
+
 /**
  * GET /tracks/:trackID
  */

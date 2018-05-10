@@ -1,11 +1,7 @@
 $(function () {
 
-    vgsPlayer = videojs('my-video', {
-    autoplay: false,	
-    sources: [{
-        type: "video/mp4",
-        src: ""
-        }]
+    vgsPlayer = videojs(document.querySelector('.video-js'), {
+    autoplay: false   
     });
 
     

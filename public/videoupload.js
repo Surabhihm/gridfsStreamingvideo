@@ -1,0 +1,9 @@
+$(document).ready(function()
+{
+	$("#fileuploader").uploadFile({
+	url:"http://localhost:3005/tracks/",
+    fileName:"myfile",
+    multiple:false,
+    dragDrop:true,
+	});
+});

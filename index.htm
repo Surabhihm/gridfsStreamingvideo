@@ -2,15 +2,15 @@
   <head>
     <title>Video stream sample</title>
     <link href="video-js.min.css" rel="stylesheet">
-     <link href="custom.css" rel="stylesheet">
-     <link href="bootstrap.css" rel="stylesheet">
-     <style>
-        .video-js .vjs-control-bar { 
+    <link href="custom.css" rel="stylesheet"> 
+    <link href="bootstrap.css" rel="stylesheet">
+    <style>
+         .video-js .vjs-control-bar { 
           display: -webkit-box;
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
-        }
+        } 
 
         /* Make the demo a little prettier */
         body {
@@ -31,11 +31,13 @@
       <div class="row">
         <div class="col-md-12">
           <h2>No Video to show</h2>
+          </br>
+          <a href="/uploadfilescreen" > Start uploading video <a>
         </div>
       </div>
     </div>
 
-    <div class="container" id="showvideo" style="display:none;">
+    <div class="container-fluid" id="showvideo" style="display:none;">
       <div class="row">
         <div class="col-md-2">
           <ul class="list-group" id="videolist">            
@@ -43,7 +45,7 @@
         </div>
         <div class="col-md-10">
           <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="1000" height="500"  data-setup='{ "inactivityTimeout": 0 }'>
-            <source id="videosrc" src="" type='video/mp4'>
+            <source id="videosrc" src="a" type='video/mp4'>
     
             <p class="vjs-no-js">
               To view this video please enable JavaScript, and consider upgrading to a web browser that
