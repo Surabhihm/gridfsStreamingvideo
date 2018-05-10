@@ -24,13 +24,23 @@
 
         .footer {
           position: fixed;
-          left: 0;
-          bottom: 0;
+          left: 0px;
+          bottom: 10px;
           width: 100%;
           background-color: green;
           color: white;
           text-align: center;
         }
+
+        .footer-links ul li {
+    float: left;
+    display: inline;
+}
+.copyright p {
+  color: white;
+  font-size: 1rem;
+  padding: 10px 5px 0;
+}
 
        
     </style>
@@ -58,12 +68,9 @@
 
     <div class="container-fluid" id="showvideo" style="display:none;">
       <div class="row">
-        <div class="col-md-4">
-          <div >
-            
-          </div>          
-        </div>
-        <div class="col-md-8">
+        <!-- <div class="col-md-4">                  
+        </div> -->
+        <div class="col-md-8 offset-md-4">
           <div >
              <a href="/uploadfilescreen" >Upload More Vedios </a> 
           </div>          
@@ -97,9 +104,20 @@
       </div>
       
     </div>
-    <div class="footer">
-      <!-- <p>Prefab estimator</p> -->
-    </div>
+    <div class="row footer ml-0">
+        <div class="footer-links col-md-6 col-sm-6">
+          <ul>
+            <li><a href="http://www.apcc.com" target="blank" shape="rect">Schneider Electric IT Home</a></li>
+            <li>|</li>
+            <li><a href="http://www.schneider-electric.com" target="blank" shape="rect">Schneider Electric Home</a></li>
+            <li>|</li>
+            <li><a href="#" shape="rect">About</a></li>
+          </ul>
+        </div>
+        <div class="copyright col-md-6 col-sm-6">
+          <p class="pull-right">Copyright &copy; Schneider Electric IT Corporation All Rights Reserved</p>
+        </div>
+      </div>
     <!-- <button id="toggleButton">Start/Stop</button> -->
     <script src="video.js"></script>
     <script src="jquery.js"></script>

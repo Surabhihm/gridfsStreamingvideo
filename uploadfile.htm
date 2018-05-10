@@ -5,7 +5,7 @@
         <link href="uploadfilelib.css" rel="stylesheet">
     <style>
         body {
-          margin-top: 100px;
+          margin-top: 0px;
           background: #222;
           text-align: center; 
           color: #aaa;
@@ -13,11 +13,38 @@
           background: radial-gradient(#333, hsl(200,30%,6%) );
         }
 
+          .footer {
+          position: fixed;
+          left: 0px;
+          bottom: 10px;
+          width: 100%;
+          background-color: green;
+          color: white;
+          text-align: center;
+        }
+
+        .footer-links ul li {
+    float: left;
+    display: inline;
+}
+.copyright p {
+  color: white;
+  font-size: 1rem;
+  padding: 10px 5px 0;
+}
+
        
     </style>
   </head>
   <body>
-
+<header class="clearfix">
+      <nav class="navbar navbar-fixed-top navheader" style="background-color:green;">
+        <div >
+          <h3>Prefab Pricing Estimator Video</h3>
+        </div>
+        
+      </nav>
+    </header>
    
 
     <div class="container-fluid" >
@@ -58,7 +85,20 @@
     </div>
     
     <!-- <button id="toggleButton">Start/Stop</button> -->
-   
+   <div class="row footer ml-0">
+        <div class="footer-links col-md-6 col-sm-6">
+          <ul>
+            <li><a href="http://www.apcc.com" target="blank" shape="rect">Schneider Electric IT Home</a></li>
+            <li>|</li>
+            <li><a href="http://www.schneider-electric.com" target="blank" shape="rect">Schneider Electric Home</a></li>
+            <li>|</li>
+            <li><a href="#" shape="rect">About</a></li>
+          </ul>
+        </div>
+        <div class="copyright col-md-6 col-sm-6">
+          <p class="pull-right">Copyright &copy; Schneider Electric IT Corporation All Rights Reserved</p>
+        </div>
+      </div>
     <script src="jquery.js"></script>
     <script src="/uploadfilelib.js"></script>
     <script src="videoupload.js"></script>
