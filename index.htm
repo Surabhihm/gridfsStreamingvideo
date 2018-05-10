@@ -14,7 +14,7 @@
 
         /* Make the demo a little prettier */
         body {
-          margin-top: 100px;
+          margin-top: 0px;
           background: #222;
           text-align: center; 
           color: #aaa;
@@ -22,10 +22,29 @@
           background: radial-gradient(#333, hsl(200,30%,6%) );
         }
 
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background-color: green;
+          color: white;
+          text-align: center;
+        }
+
        
     </style>
   </head>
   <body>
+
+     <header class="clearfix">
+      <nav class="navbar navbar-fixed-top navheader" style="background-color:green;">
+        <div >
+          <h3>Prefab Pricing Estimator Video</h3>
+        </div>
+        
+      </nav>
+    </header>
 
     <div class="container" id="novideo" style="display:none;">
       <div class="row">
@@ -40,7 +59,24 @@
     <div class="container-fluid" id="showvideo" style="display:none;">
       <div class="row">
         <div class="col-md-4">
-          <div class="list-group" id="videolist">            
+          <div >
+            
+          </div>          
+        </div>
+        <div class="col-md-8">
+          <div >
+             <a href="/uploadfilescreen" >Upload More Vedios </a> 
+          </div>          
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="row">
+            <div class="col-md-12">
+             <button class="btn btn-info btn-block"> Vedio List</button>
+            </div>
+          </div>
+          <div class="list-group well" id="videolist">            
           </div>
           <div class="row mt-5">
             <div class="col-md-12">
@@ -61,11 +97,15 @@
       </div>
       
     </div>
-    
+    <div class="footer">
+      <!-- <p>Prefab estimator</p> -->
+    </div>
     <!-- <button id="toggleButton">Start/Stop</button> -->
     <script src="video.js"></script>
     <script src="jquery.js"></script>
     <script src="app.js"></script>
+
+    
 
   </body>
 </html>
